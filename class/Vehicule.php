@@ -16,7 +16,8 @@ abstract class Vehicule
     {
         return [
             'couleur' => $this->couleur,
-            'poids' => $this->poids
+            'poids' => $this->poids,
+            'nb_changement_couleur' => $this->nb_changement_couleur
         ];
     }
 

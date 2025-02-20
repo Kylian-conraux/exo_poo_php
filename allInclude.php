@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 //include toutes les class
 

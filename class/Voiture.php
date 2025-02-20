@@ -59,7 +59,7 @@ class Voiture extends Quatre_roues
     public function enlever_pneu_neige($nombre)
     {
         $this->nombre_pneu_neige -= $nombre;
-        if($this->nombre_pneu_neige < 0){
+        if ($this->nombre_pneu_neige < 0) {
             echo "Je sais que c'est négatif et que c'est une ineptie mais c'est juste pour l'exemple, sinon ça serait 0 si on traitait le cas.<br>";
         }
         echo "Les pneus neige ont été enlevés, il y a " . $this->get_nombre_pneu_neige() . " pneus neige";

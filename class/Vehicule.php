@@ -39,7 +39,7 @@ abstract class Vehicule
     public function set_poids($poids)
     {
         $this->poids = $poids;
-        if($this->poids > 2100){
+        if ($this->poids > 2100) {
             $this->poids = 2100;
         }
     }
@@ -58,8 +58,8 @@ abstract class Vehicule
     public function repeindre($couleur)
     {
         $this->set_couleur($couleur);
-        echo "Le véhicule a été repeint en $couleur". self::SAUT_DE_LIGNE;
-        echo "Le nombre de changement de couleur est de $this->nb_changement_couleur". self::SAUT_DE_LIGNE;
+        echo "Le véhicule a été repeint en $couleur" . self::SAUT_DE_LIGNE;
+        echo "Le nombre de changement de couleur est de $this->nb_changement_couleur" . self::SAUT_DE_LIGNE;
     }
 
     public function ajouter_essence($nombre_litre)
@@ -73,7 +73,7 @@ abstract class Vehicule
      */
     public static function afficher_attribut($vehicule)
     {
-        echo "Attributs du véhicule " . get_class($vehicule) . " : ". self::SAUT_DE_LIGNE;
+        echo "Attributs du véhicule " . get_class($vehicule) . " : " . self::SAUT_DE_LIGNE;
         $attributs = $vehicule->toArray();
         foreach ($attributs as $key => $value) {
             echo "$key : $value ." . self::SAUT_DE_LIGNE;

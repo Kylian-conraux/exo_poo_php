@@ -99,6 +99,26 @@
     Vehicule::afficher_attribut($camion_blanc);
     echo "<br>";
     ?>
+
+    <h1>Voiture verte de 2100 kg avec 4 portes</h1>
+    <?php
+    $voiture_verte = new Voiture('vert', 2100, 4, 0);
+    echo "La voiture est de couleur " . $voiture_verte->get_couleur() . " et pèse " . $voiture_verte->get_poids() . " kg, elle a " . $voiture_verte->get_nb_portes() . " portes et " . $voiture_verte->get_nombre_pneu_neige() . " pneus neige";
+    echo "<br>";
+    $voiture_verte->ajouterPersonne(80);
+    echo "<br>";
+    $voiture_verte->ajouter_pneu_neige(2);
+    echo "<br>";
+    $voiture_verte->repeindre('blue');
+    echo "<br>";
+    $voiture_verte->enlever_pneu_neige(4);
+    echo "<br>";
+    $voiture_verte->repeindre('noir');
+    echo "<br>";
+    Vehicule::afficher_attribut($voiture_verte);
+    echo "<br>";
+
+    ?>
 </body>
 
 </html>

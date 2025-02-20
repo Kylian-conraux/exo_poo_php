@@ -4,6 +4,7 @@ abstract class Vehicule
     private $couleur;
     private $poids;
     const SAUT_DE_LIGNE = "<br>";
+    protected $nb_changement_couleur = 0;
 
     public function __construct($couleur, $poids)
     {
@@ -31,12 +32,16 @@ abstract class Vehicule
 
     public function set_couleur($couleur)
     {
+        $this->nb_changement_couleur++;
         $this->couleur = $couleur;
     }
 
     public function set_poids($poids)
     {
         $this->poids = $poids;
+        if($this->poids > 2100){
+            $this->poids = 2100;
+        }
     }
 
 
@@ -52,8 +57,9 @@ abstract class Vehicule
 
     public function repeindre($couleur)
     {
-        $this->couleur = $couleur;
-        echo "Le véhicule a été repeint en $couleur";
+        $this->set_couleur($couleur);
+        echo "Le véhicule a été repeint en $couleur". self::SAUT_DE_LIGNE;
+        echo "Le nombre de changement de couleur est de $this->nb_changement_couleur". self::SAUT_DE_LIGNE;
     }
 
     public function ajouter_essence($nombre_litre)

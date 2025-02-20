@@ -23,7 +23,7 @@ class Camion extends Quatre_roues {
 
     public function ajouterPersonne($poids){
         $this->set_poids($this->get_poids() + $poids);
-        echo "Une personne a été ajoutée, le poids total est de $this->get_poids()";
+        echo "Une personne a été ajoutée, le poids total est de" . $this->get_poids() ." kg";
     }
 
     public function repeindre($couleur){
@@ -33,6 +33,6 @@ class Camion extends Quatre_roues {
 
     public function ajouter_remorque($longueur_remorque){
         $this->longueur += $longueur_remorque;
-        echo "La remorque a été ajoutée, la longueur totale est de $this->longueur";
+        echo "La remorque a été ajoutée, la longueur totale est de $this->longueur mètres";
     }
 }

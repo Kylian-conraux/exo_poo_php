@@ -22,7 +22,7 @@ class Deux_roues extends Vehicule {
 
     public function ajouterPersonne($poids_personne){
         $this->set_poids($this->get_poids() + $poids_personne);
-        echo "Une personne a été ajoutée, le poids total est de ".$this->get_poids();
+        echo "Une personne de ". $poids_personne ." kg a été ajoutée, le poids total est de ".$this->get_poids() . " kg";
     }
 
     public function mettre_essence($nombre_litre){

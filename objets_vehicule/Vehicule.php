@@ -4,7 +4,7 @@ class Vehicule {
     private $poids;
 
 
-    public function _construct($couleur, $poids){
+    public function __construct($couleur, $poids){
         $this->couleur = $couleur;
         $this->poids = $poids;
     }
@@ -32,6 +32,6 @@ class Vehicule {
 
     public function ajouterPersonne($poids){
         $this->poids += $poids;
-        echo "Une personne a été ajoutée, le poids total est de $this->poids";
+        echo "Une personne a été ajoutée, le poids total est de $this->poids kg";
     }
 }

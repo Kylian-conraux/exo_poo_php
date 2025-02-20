@@ -9,6 +9,13 @@ class Quatre_roues extends Vehicule{
         $this->nb_portes = $nb_portes;
     }
 
+    public function toArray()
+    {
+        return array_merge(parent::toArray(), [
+            'nb_portes' => $this->nb_portes
+        ]);
+    }
+
     public function get_nb_portes(){
         return $this->nb_portes;
     }

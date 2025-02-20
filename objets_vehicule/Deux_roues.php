@@ -8,6 +8,12 @@ class Deux_roues extends Vehicule {
         $this->cylindree = $cylindree;
     }
 
+    public function toArray() {
+        return array_merge(parent::toArray(), [
+            'cylindree' => $this->cylindree
+        ]);
+    }
+
     public function get_cylindree(){
         return $this->cylindree;
     }
@@ -30,5 +36,9 @@ class Deux_roues extends Vehicule {
         echo "Le deux roues a été rempli d'essence, il y a $nombre_litre litres d'essence";
     }
 
+    public function changerCylindree($cylindree){
+        $this->cylindree = $cylindree;
+        echo "La cylindrée a été changée, la nouvelle cylindrée est de $cylindree cm3";
+    }
 
 }

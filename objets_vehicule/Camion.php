@@ -9,6 +9,13 @@ class Camion extends Quatre_roues {
         $this->longueur = $longueur;
     }
 
+    public function toArray()
+    {
+        return array_merge(parent::toArray(), [
+            'longueur' => $this->longueur
+        ]);
+    }
+
     public function get_longueur(){
         return $this->longueur;
     }

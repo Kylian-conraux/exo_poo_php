@@ -8,7 +8,7 @@
 <body>
         <h1>Affichage d'un véhicule : </h1>
         <?php
-        include 'objets_vehicule/Vehicule.php';
+        include_once 'allInclude.php';
         $voiture_noir = new Vehicule('noir', 1500);
         echo "La voiture est de couleur " . $voiture_noir->get_couleur() . " et pèse " . $voiture_noir->get_poids() . " kg";
         echo "<br>";

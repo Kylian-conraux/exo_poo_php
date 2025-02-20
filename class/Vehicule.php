@@ -39,7 +39,8 @@ abstract class Vehicule
     public function set_poids($poids)
     {
         $this->poids = $poids;
-        if ($this->poids > 2100) {
+        $className = get_class($this);
+        if ($this->poids > 2100 && $className != "Camion") {
             $this->poids = 2100;
         }
     }

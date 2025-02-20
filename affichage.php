@@ -10,7 +10,10 @@
 <body>
     <h1>Affichage d'un véhicule Noire (abstract du coup c'est mort) : </h1>
     <?php
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
     include_once 'allInclude.php';
+    
     /* $voiture_noir = new Vehicule('noir', 1500);
         echo "La voiture est de couleur " . $voiture_noir->get_couleur() . " et pèse " . $voiture_noir->get_poids() . " kg";
         echo "<br>";
@@ -117,7 +120,19 @@
     echo "<br>";
     Vehicule::afficher_attribut($voiture_verte);
     echo "<br>";
+    ?>
 
+    <h1>Camion bleu de 10000kg avec 2 portes</h1>
+    <?php
+    $camion_bleu = new Camion('bleu', 10000, 2, 10);
+    echo "Le camion est de couleur " . $camion_bleu->get_couleur() . " et pèse " . $camion_bleu->get_poids() . " kg, il a " . $camion_bleu->get_nb_portes() . " portes et une longueur de " . $camion_bleu->get_longueur() . " mètres";
+    echo "<br>";
+    $camion_bleu->mettre_essence(100);
+    echo "<br>";
+    $camion_bleu->repeindre('vert');
+    echo "<br>";
+    Vehicule::afficher_attribut($camion_bleu);
+    echo "<br>";
     ?>
 </body>
 

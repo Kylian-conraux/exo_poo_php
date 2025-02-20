@@ -1,9 +1,11 @@
 <?php 
 
-//include tous les objets_vehicule
+//include toutes les class
 
-include 'objets_vehicule/Vehicule.php';
-include 'objets_vehicule/Deux_roues.php';
-include 'objets_vehicule/Quatre_roues.php';
-include 'objets_vehicule/Camion.php';
-include 'objets_vehicule/Voiture.php';
+include 'class/Vehicule.php';
+include 'class/Deux_roues.php';
+include 'class/Quatre_roues.php';
+include 'class/Camion.php';
+include 'class/Voiture.php';
+
+//include toutes les interfaces 

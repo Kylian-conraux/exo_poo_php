@@ -21,8 +21,9 @@ class Quatre_roues extends Vehicule{
         echo "Le quatre roues roule";
     }
 
-    public function ajouterPersonne(){
-        echo "Une personne a été ajoutée";
+    public function ajouterPersonne($poids){
+        $this->set_poids($this->get_poids() + $poids);
+        echo "Une personne a été ajoutée, le poids total est de ".$this->get_poids();
     }
 
    public function repeindre($couleur){

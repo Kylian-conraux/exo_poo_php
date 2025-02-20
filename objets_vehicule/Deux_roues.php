@@ -20,12 +20,14 @@ class Deux_roues extends Vehicule {
         echo "Le deux roues roule";
     }
 
-    public function ajouterPersonne(){
-        echo "Une personne a été ajoutée";
+    public function ajouterPersonne($poids_personne){
+        $this->set_poids($this->get_poids() + $poids_personne);
+        echo "Une personne a été ajoutée, le poids total est de ".$this->get_poids();
     }
 
-    public function mettre_essence(){
-        echo "Le deux roues a été rempli d'essence";
+    public function mettre_essence($nombre_litre){
+
+        echo "Le deux roues a été rempli d'essence, il y a $nombre_litre litres d'essence";
     }
 
 

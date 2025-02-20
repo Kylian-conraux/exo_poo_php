@@ -30,7 +30,8 @@ class Vehicule {
         echo "Le véhicule roule";
     }
 
-    public function ajouterPersonne(){
-        echo "Une personne a été ajoutée";
+    public function ajouterPersonne($poids){
+        $this->poids += $poids;
+        echo "Une personne a été ajoutée, le poids total est de $this->poids";
     }
 }

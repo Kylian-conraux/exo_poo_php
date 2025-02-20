@@ -21,8 +21,9 @@ class Voiture extends Quatre_roues{
         echo "La voiture roule";
     }
 
-    public function ajouterPersonne(){
-        echo "Une personne a été ajoutée";
+    public function ajouterPersonne($poids){
+        $this->set_poids($this->get_poids() + $poids);
+        echo "Une personne a été ajoutée dans la voiture, le poids total est de ".$this->get_poids();
     }
 
     public function repeindre($couleur){
@@ -30,12 +31,14 @@ class Voiture extends Quatre_roues{
         echo "Le véhicule a été repeint en $couleur";
     }
 
-    public function ajouter_pneu_neige(){
-        echo "Les pneus neige ont été mis";
+    public function ajouter_pneu_neige($nombre){
+        $this->nombre_pneu_neige += $nombre;
+        echo "Les pneus neige ont été mis, il y a $nombre pneus neige";
     }
 
-    public function enlever_pneu_neige(){
-        echo "Les pneus neige ont été enlevés";
+    public function enlever_pneu_neige($nombre){
+        $this->nombre_pneu_neige -= $nombre;
+        echo "Les pneus neige ont été enlevés, il y a $nombre pneus neige";
     }
     
 }

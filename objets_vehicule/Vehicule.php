@@ -34,4 +34,14 @@ class Vehicule {
         $this->poids += $poids;
         echo "Une personne a été ajoutée, le poids total est de $this->poids kg";
     }
+
+    public function repeindre($couleur){
+        $this->couleur = $couleur;
+        echo "Le véhicule a été repeint en $couleur";
+    }
+
+    public function ajouter_essence($nombre_litre){
+        $this->poids += $nombre_litre;
+        echo "Le véhicule a été rempli d'essence, il y a $nombre_litre litres d'essence en plus, le poids total est de $this->poids kg"; 
+    }
 }

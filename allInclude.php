@@ -8,4 +8,5 @@ include 'class/Quatre_roues.php';
 include 'class/Camion.php';
 include 'class/Voiture.php';
 
-//include toutes les interfaces 
+//include toutes les interfaces
+include 'interface/Action.php';

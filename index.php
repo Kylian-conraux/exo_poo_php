@@ -6,6 +6,6 @@
     <title>Exo_poo</title>
 </head>
 <body>
-    
+    <a href="./affichage.php">Partie 2 : affichage d'un véhiculn noir de 1500 KG ...</a>
 </body>
 </html>

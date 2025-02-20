@@ -21,8 +21,8 @@ class Deux_roues extends Vehicule {
     }
 
     public function ajouterPersonne($poids_personne){
-        $this->set_poids($this->get_poids() + $poids_personne);
-        echo "Une personne de ". $poids_personne ." kg a été ajoutée, le poids total est de ".$this->get_poids() . " kg";
+        $this->set_poids($this->get_poids() + $poids_personne + 2); //2 kg pour le casque
+        echo "Une personne de ". $poids_personne ." kg a été ajoutée avec (+2kg) pour le casque, le poids total est de ".$this->get_poids() . " kg";
     }
 
     public function mettre_essence($nombre_litre){

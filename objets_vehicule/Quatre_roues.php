@@ -23,7 +23,7 @@ class Quatre_roues extends Vehicule{
 
     public function ajouterPersonne($poids){
         $this->set_poids($this->get_poids() + $poids);
-        echo "Une personne a été ajoutée, le poids total est de ".$this->get_poids();
+        echo "Une personne de ". $poids ." kg a été ajoutée, le poids total est de ".$this->get_poids();
     }
 
    public function repeindre($couleur){

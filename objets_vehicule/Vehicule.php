@@ -1,5 +1,5 @@
 <?php 
-class Vehicule {
+abstract class Vehicule {
     private $couleur;
     private $poids;
 
@@ -30,10 +30,10 @@ class Vehicule {
         echo "Le véhicule roule";
     }
 
-    public function ajouterPersonne($poids){
-        $this->poids += $poids;
-        echo "Une personne a été ajoutée, le poids total est de $this->poids kg";
-    }
+    public abstract function ajouterPersonne($poids);//{
+        //$this->poids += $poids;
+        //echo "Une personne a été ajoutée, le poids total est de $this->poids kg";
+    //}
 
     public function repeindre($couleur){
         $this->couleur = $couleur;

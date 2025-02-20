@@ -3,7 +3,7 @@ abstract class Vehicule
 {
     private $couleur;
     private $poids;
-
+    const SAUT_DE_LIGNE = "<br>";
 
     public function __construct($couleur, $poids)
     {
@@ -67,10 +67,10 @@ abstract class Vehicule
      */
     public static function afficher_attribut($vehicule)
     {
-        echo "Attributs du véhicule " . get_class($vehicule) . " : <br>";
+        echo "Attributs du véhicule " . get_class($vehicule) . " : ". self::SAUT_DE_LIGNE;
         $attributs = $vehicule->toArray();
         foreach ($attributs as $key => $value) {
-            echo "$key : $value <br>";
+            echo "$key : $value ." . self::SAUT_DE_LIGNE;
         }
     }
 }
